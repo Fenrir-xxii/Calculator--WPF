@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp2_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2_Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400">
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"></RowDefinition>
+            <RowDefinition Height="25*"></RowDefinition>
+            <RowDefinition Height="25*"></RowDefinition>
+            <RowDefinition Height="25*"></RowDefinition>
+            <RowDefinition Height="25*"></RowDefinition>
+            <RowDefinition Height="25*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+            <ColumnDefinition Width="25*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
+            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1,1,1,1">
+                <TextBlock Name ="History" Background ="Azure" Foreground ="DarkGray" Height ="35" Text="000000000000000000000000" TextAlignment="Right" FontSize="20" IsEnabled="False"></TextBlock>
+            </Border>
+            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1,0,1,1">
+                <TextBlock Name ="Monitor" Background ="Azure" Height ="65" Text="111111111111" TextAlignment="Right" FontSize="50"></TextBlock>
+            </Border>
+        </StackPanel>
+        <Button Grid.Column="0" Grid.Row="1" x:Name="ClearEntry" Content="CE" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="1" Grid.Row="1" x:Name="Clear" Content="C" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="2" Grid.Row="1" x:Name="Backspace" Content="&#171;" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="3" Grid.Row="1" x:Name="Divide" Content="/" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="0" Grid.Row="2" x:Name="Seven" Content="7" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="1" Grid.Row="2" x:Name="Eight" Content="8" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="2" Grid.Row="2" x:Name="Nine" Content="9" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="3" Grid.Row="2" x:Name="Multiply" Content="*" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="0" Grid.Row="3" x:Name="Four" Content="4" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="1" Grid.Row="3" x:Name="Five" Content="5" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="2" Grid.Row="3" x:Name="Six" Content="6"  Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="3" Grid.Row="3" x:Name="Minus" Content="-" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="0" Grid.Row="4" x:Name="One" Content="1"  Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="1" Grid.Row="4" x:Name="Two" Content="2" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="2" Grid.Row="4" x:Name="Three" Content="3" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="3" Grid.Row="4" x:Name="Plus" Content="+" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="0" Grid.Row="5" x:Name="Dot" Content="." Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="1" Grid.Row="5" x:Name="Zero" Content="0" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="4" x:Name="Equals" Content="=" Margin="1" FontSize="50"></Button>
+
+    </Grid>
+</Window>
