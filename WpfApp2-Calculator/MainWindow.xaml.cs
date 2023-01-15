@@ -21,7 +21,8 @@ namespace WpfApp2_Calculator
     public partial class MainWindow : Window
     {
         private List<double> _numbers;
-        private string _currentNumber;
+        private string _currentNumber = "";
+        private string _history = "";
         private bool _isDotPressed = false;
         public MainWindow()
         {
@@ -90,6 +91,54 @@ namespace WpfApp2_Calculator
         public void UpdateMonitor()
         {
             Monitor.Text = _currentNumber;
+            UpdateHistory();
+        }
+        public void UpdateHistory()
+        {
+            if (_history.Length > 0)
+            {
+                History.Text = _history;
+            }
+        }
+        private void Backspace_Click(object sender, RoutedEventArgs e)
+        {
+            if (_currentNumber.Length > 0)
+            {
+                _currentNumber = _currentNumber.Remove(_currentNumber.Length - 1);
+                UpdateMonitor();
+            }
+        }
+        private void ClearEntry_Click(object sender, RoutedEventArgs e)
+        {
+            if (_currentNumber.Length > 0)
+            {
+                _currentNumber = "";
+                UpdateMonitor();
+            }
+        }
+        private void Plus_Click(object sender, RoutedEventArgs e)
+        {
+            if (_isDotPressed)
+            {
+                double temp;
+                if(double.TryParse(_currentNumber,out temp))
+                {
+                    _numbers.Add(temp);
+                    _history += temp + "+";
+                    _currentNumber = "";
+                }
+            }
+            else
+            {
+                int temp;
+                if (int.TryParse(_currentNumber, out temp))
+                {
+                    _numbers.Add(temp);
+                    _history += temp + "+";
+                    _currentNumber = "";
+                }
+            }
+            UpdateHistory();
         }
     }
 }

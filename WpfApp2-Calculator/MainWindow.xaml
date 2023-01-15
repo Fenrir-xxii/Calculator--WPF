@@ -30,9 +30,9 @@
             </Border>
         </DockPanel>
         
-        <Button Grid.Column="0" Grid.Row="1" x:Name="ClearEntry" Content="CE" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="0" Grid.Row="1" x:Name="ClearEntry" Content="CE" Margin="1" FontSize="50" Click="ClearEntry_Click"></Button>
         <Button Grid.Column="1" Grid.Row="1" x:Name="Clear" Content="C" Margin="1" FontSize="50"></Button>
-        <Button Grid.Column="2" Grid.Row="1" x:Name="Backspace" Content="&#171;" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="2" Grid.Row="1" x:Name="Backspace" Content="&#171;" Margin="1" FontSize="50" Click="Backspace_Click"></Button>
         <Button Grid.Column="3" Grid.Row="1" x:Name="Divide" Content="/" Margin="1" FontSize="50"></Button>
         <Button Grid.Column="0" Grid.Row="2" x:Name="Seven" Content="7" Margin="1" FontSize="50" Click="Seven_Click"></Button>
         <Button Grid.Column="1" Grid.Row="2" x:Name="Eight" Content="8" Margin="1" FontSize="50" Click="Eight_Click"></Button>
@@ -45,7 +45,7 @@
         <Button Grid.Column="0" Grid.Row="4" x:Name="One" Content="1"  Margin="1" FontSize="50" Click="One_Click"></Button>
         <Button Grid.Column="1" Grid.Row="4" x:Name="Two" Content="2" Margin="1" FontSize="50" Click="Two_Click"></Button>
         <Button Grid.Column="2" Grid.Row="4" x:Name="Three" Content="3" Margin="1" FontSize="50" Click="Three_Click"></Button>
-        <Button Grid.Column="3" Grid.Row="4" x:Name="Plus" Content="+" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="3" Grid.Row="4" x:Name="Plus" Content="+" Margin="1" FontSize="50" Click="Plus_Click"></Button>
         <Button Grid.Column="0" Grid.Row="5" x:Name="Dot" Content="." Margin="1" FontSize="50" Click="Dot_Click"></Button>
         <Button Grid.Column="1" Grid.Row="5" x:Name="Zero" Content="0" Margin="1" FontSize="50" Click="Zero_Click"></Button>
         <Button Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="4" x:Name="Equals" Content="=" Margin="1" FontSize="50"></Button>
