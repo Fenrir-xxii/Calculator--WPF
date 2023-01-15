@@ -18,12 +18,18 @@ namespace WpfApp2_Calculator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    public enum MathOperator
+    {
+        Plus=0, Minus, Multiply, Divide
+    }
     public partial class MainWindow : Window
     {
         private List<double> _numbers;
         private string _currentNumber = "";
         private string _history = "";
         private bool _isDotPressed = false;
+        private MathOperator _operator;
+        private double _sum;
         public MainWindow()
         {
             InitializeComponent();
@@ -139,6 +145,50 @@ namespace WpfApp2_Calculator
                 }
             }
             UpdateHistory();
+            _operator = MathOperator.Plus;
+        }
+        public void DoMath()
+        {
+            switch(_operator)
+            {
+                case MathOperator.Plus:
+                    _sum = _numbers[0] + _numbers[1];
+                    break;
+                case MathOperator.Minus:
+                    break;
+                case MathOperator.Multiply:
+                    break;
+                case MathOperator.Divide:
+                    break;
+            }
+            _currentNumber = _sum.ToString();
+            UpdateMonitor();
+        }
+        private void Equals_Click(object sender, RoutedEventArgs e)
+        {
+            if (_isDotPressed)
+            {
+                double temp;
+                if (double.TryParse(_currentNumber, out temp))
+                {
+                    _numbers.Add(temp);
+                    _history += temp + "=";
+                    _currentNumber = "";
+                }
+            }
+            else
+            {
+                int temp;
+                if (int.TryParse(_currentNumber, out temp))
+                {
+                    _numbers.Add(temp);
+                    _history += temp + "=";
+                    _currentNumber = "";
+                }
+            }
+            UpdateHistory();
+            DoMath();
+            _currentNumber = "";
         }
     }
 }

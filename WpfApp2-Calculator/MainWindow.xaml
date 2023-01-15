@@ -48,7 +48,7 @@
         <Button Grid.Column="3" Grid.Row="4" x:Name="Plus" Content="+" Margin="1" FontSize="50" Click="Plus_Click"></Button>
         <Button Grid.Column="0" Grid.Row="5" x:Name="Dot" Content="." Margin="1" FontSize="50" Click="Dot_Click"></Button>
         <Button Grid.Column="1" Grid.Row="5" x:Name="Zero" Content="0" Margin="1" FontSize="50" Click="Zero_Click"></Button>
-        <Button Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="4" x:Name="Equals" Content="=" Margin="1" FontSize="50"></Button>
+        <Button Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="4" x:Name="Equals" Content="=" Margin="1" FontSize="50" Click="Equals_Click"></Button>
 
     </Grid>
 </Window>
