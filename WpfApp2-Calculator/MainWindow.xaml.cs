@@ -42,6 +42,10 @@ namespace WpfApp2_Calculator
             {
                 Clear_Click(sender, e);
             }
+            if(_currentNumber == "0")
+            {
+                _currentNumber = "";
+            }
             _currentNumber += Seven.Content.ToString();
             UpdateMonitor();
         }
@@ -50,6 +54,10 @@ namespace WpfApp2_Calculator
             if (_isEqualPressed)
             {
                 Clear_Click(sender, e);
+            }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
             }
             _currentNumber += Eight.Content.ToString();
             UpdateMonitor();
@@ -60,6 +68,10 @@ namespace WpfApp2_Calculator
             {
                 Clear_Click(sender, e);
             }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
+            }
             _currentNumber += Nine.Content.ToString();
             UpdateMonitor();
         }
@@ -68,6 +80,10 @@ namespace WpfApp2_Calculator
             if (_isEqualPressed)
             {
                 Clear_Click(sender, e);
+            }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
             }
             _currentNumber += Four.Content.ToString();
             UpdateMonitor();
@@ -78,6 +94,10 @@ namespace WpfApp2_Calculator
             {
                 Clear_Click(sender, e);
             }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
+            }
             _currentNumber += Five.Content.ToString();
             UpdateMonitor();
         }
@@ -86,6 +106,10 @@ namespace WpfApp2_Calculator
             if (_isEqualPressed)
             {
                 Clear_Click(sender, e);
+            }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
             }
             _currentNumber += Six.Content.ToString();
             UpdateMonitor();
@@ -96,6 +120,10 @@ namespace WpfApp2_Calculator
             {
                 Clear_Click(sender, e);
             }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
+            }
             _currentNumber += One.Content.ToString();
             UpdateMonitor();
         }
@@ -104,6 +132,10 @@ namespace WpfApp2_Calculator
             if (_isEqualPressed)
             {
                 Clear_Click(sender, e);
+            }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
             }
             _currentNumber += Two.Content.ToString();
             UpdateMonitor();
@@ -114,6 +146,10 @@ namespace WpfApp2_Calculator
             {
                 Clear_Click(sender, e);
             }
+            if (_currentNumber == "0")
+            {
+                _currentNumber = "";
+            }
             _currentNumber += Three.Content.ToString();
             UpdateMonitor();
         }
@@ -122,6 +158,10 @@ namespace WpfApp2_Calculator
             if (_isEqualPressed)
             {
                 Clear_Click(sender, e);
+            }
+            if(_currentNumber == "0")
+            {
+                _currentNumber = "";
             }
             _currentNumber += Zero.Content.ToString();
             UpdateMonitor();
@@ -134,7 +174,11 @@ namespace WpfApp2_Calculator
             }
             if (!_isDotPressed)
             {
-                _currentNumber += Dot.Content.ToString();
+                if(_currentNumber == "")
+                {
+                    _currentNumber = "0";
+                }
+                _currentNumber += ",";
                 UpdateMonitor();
                 _isDotPressed = true;
             }
@@ -191,7 +235,7 @@ namespace WpfApp2_Calculator
             }
             if (_isEqualPressed)
             {
-                _history = _history.Remove(_history.Length - 1);
+                _history = _history.Remove(_history.Length - 1) + "+";
             }
             if (_numbers.Count > 1)
             {
@@ -274,6 +318,10 @@ namespace WpfApp2_Calculator
                     _currentNumber = "";
                 }
             }
+            if (_isEqualPressed)
+            {
+                _history = _history.Remove(_history.Length - 1) + "-";
+            }
             if (_numbers.Count > 1)
             {
                 DoMath();
@@ -305,6 +353,10 @@ namespace WpfApp2_Calculator
                     _currentNumber = "";
                 }
             }
+            if (_isEqualPressed)
+            {
+                _history = _history.Remove(_history.Length - 1) + "*";
+            }
             if (_numbers.Count > 1)
             {
                 DoMath();
@@ -335,6 +387,10 @@ namespace WpfApp2_Calculator
                     _history += temp + "/";
                     _currentNumber = "";
                 }
+            }
+            if (_isEqualPressed)
+            {
+                _history = _history.Remove(_history.Length - 1) + "/";
             }
             if (_numbers.Count > 1)
             {

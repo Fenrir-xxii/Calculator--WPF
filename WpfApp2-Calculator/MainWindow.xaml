@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
         <DockPanel Grid.Row="0" Grid.ColumnSpan="4" LastChildFill="True">
             <Border Background="GhostWhite" BorderBrush="Gainsboro" DockPanel.Dock="Top" BorderThickness="1,1,1,1">
-                <TextBlock Name ="History" Background ="Azure" Foreground ="DarkGray" Height ="35" Text="000000000000000000000000" TextAlignment="Right" FontSize="20" IsEnabled="False"></TextBlock>
+                <TextBlock Name ="History" Background ="Azure" Foreground ="DarkGray" Height ="35" TextAlignment="Right" FontSize="20" IsEnabled="False"></TextBlock>
             </Border>
             <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1,0,1,1">
                 <TextBlock Name ="Monitor" Background ="Azure" TextAlignment="Right" FontSize="50"></TextBlock>
