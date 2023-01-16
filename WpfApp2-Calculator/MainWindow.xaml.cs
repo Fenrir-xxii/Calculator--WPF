@@ -189,6 +189,10 @@ namespace WpfApp2_Calculator
                     _currentNumber = "";
                 }
             }
+            if (_isEqualPressed)
+            {
+                _history = _history.Remove(_history.Length - 1);
+            }
             if (_numbers.Count > 1)
             {
                 DoMath();
